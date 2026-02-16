@@ -7,15 +7,15 @@ const Tour = ({ id, name, info, image, price, removeTour }) => {
     <article className="single-tour">
       <img src={image} alt={name} />
       <footer>
-        <div className="tour-info">
+        <div className="tour-title">
           <h4>{name}</h4>
           <h4 className="tour-price">${price}</h4>
         </div>
         <p className="tour-info">
-          {readMore ? info : `${info.substring(0, 200)}`}
+          {readMore ? info : info.substring(0, 200)}
           {info.length > 200 && (
             <button onClick={() => setReadMore(!readMore)}>
-              {readMore ? "Show less" : "Show more"}
+              {readMore ? "See less" : "Show more"}
             </button>
           )}
         </p>
